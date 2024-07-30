@@ -14,6 +14,12 @@ export default function App() {
 
   let sculpture = sculptureList[index];
 
+
+  // red button click (Cheking it on inspect console to see event was clicked)
+  const handleBtnClick = () => {
+    console.log("Red Btn was clicked!! ")
+  }
+
   return (
     <>
     <div className='mx-10 mt-10 w-[430px]'>
@@ -36,6 +42,11 @@ export default function App() {
       </p>
 
     </div>
+      <button onClick={handleBtnClick} className='rounded-md border-black border-[2px] bg-red-500 p-2 text-white mx-10 mt-10'>
+          Click me!!
+      </button>
   </>
+  
+
   )
 }
