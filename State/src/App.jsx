@@ -4,6 +4,7 @@ import { sculptureList } from './data.jsx'
 
 export default function App() {
 
+  // index = start the value from 0, setIndex = function to change the value
   const [index, setIndex] = useState(0)
 
   // function for handle click
@@ -29,7 +30,7 @@ export default function App() {
       <img className='rounded-md border-black border-[2px] mt-2'
         src={sculpture.url} 
         alt={sculpture.alt}
-      />
+      />    
       <p className='mt-2 w-[300px]'>
         {sculpture.description}
       </p>
