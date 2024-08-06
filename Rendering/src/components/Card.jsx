@@ -1,5 +1,6 @@
 
-const Card = ({img, brand, detail, price}) => {
+const Card = ({product: {img, brand, detail, price}}) => {
+
   return (
     <article className="bg-blue-500 shadow-lg rounded-lg p-4 m-5">
         <img src={img} alt="shoes" className="p-1 bg-violet-600 rounded-lg"/>

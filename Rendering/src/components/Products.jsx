@@ -33,10 +33,10 @@ const Products = () => {
     
   return (
     <div>
-      {shoes.map(({img, brand, detail, price, id}) => {
+      {shoes.map((p) => {
 
           return (
-            <Card key={id} img={img} brand={brand} detail={detail} price={price} /> 
+            <Card  product={p} key={p.id} /> 
   
           );
         })}
