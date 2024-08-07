@@ -19,7 +19,7 @@ function App() {
 
     <div className="App">
       <Counter/>
-      <h1 className="text-center mt-10">Digital Clock with Moon Phase Calculator</h1>
+      <h1 className="text-center mt-10">Digital Clock with Moon Phase Calculator</h1> 
       <DigitalClock />
 
       <div className="m-5">
