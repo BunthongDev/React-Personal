@@ -1,25 +1,29 @@
+
+
 import Button from "./Button"
 
 function App() {
   return (
     <div>
         <div>
-            <Button text="Click here"/>
+            <Button children="Click here"/>
         </div>
         <div>
-            <Button text="Button"/>
+            <Button children="Button"/>
         </div>
         <div>
-            <Button text="Buy Now"/>
+            <Button children="Buy Now"/>
         </div>
         <div>
-            <Button text="Push "/>
+            <Button children="Push "/>
         </div>
         <div>
-            <Button text="Call Me Now"/>
+            <Button children="Call Me Now"/>
         </div>
     </div>
   )
 }
 
 export default App
+
+// not yet complete for coding 
