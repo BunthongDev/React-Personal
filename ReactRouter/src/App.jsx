@@ -1,36 +1,38 @@
 import './App.css';
-import { Routes, Route, BrowserRouter, Link, NavLink } from 'react-router-dom';
+import { 
+   Route, 
+   createBrowserRouter,
+   createRoutesFromElements,
+   RouterProvider
+} from 'react-router-dom';
 
 // Pages
 import Home from './pages/Home';
 import About from './pages/About';
 
+// Layouts
+import RootLayout from './layouts/RootLayout';
+import HelpLayout from './layouts/HelpLayout';
+
+// Pages/Help
+import Faq from './pages/help/Faq';
+import Contact from './pages/help/Contact';
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<RootLayout />}>
+      <Route index element={<Home />} />
+      <Route path="about" element={<About />} />
+      <Route path="help" element={<HelpLayout />}>
+        <Route path="faq" element={<Faq />} />  
+        <Route path="contact" element={<Contact />} />
+      </Route>
+    </Route>
+  )
+);
+
 function App() {
-  return (  
-    <>
-    
-    <header>
-      <nav>
-        <h1 className='text-3xl mb-2 '>Job Router</h1>
-        <Link className='mr-5 bg-blue-500 p-2 rounded-md' to="/">Home</Link>
-        <NavLink className='mr-5 bg-blue-500 p-2 rounded-md' to="/about">About</NavLink>
-
-        
-      </nav>
-
-
-    </header>
-
-      <main>
-        <Routes>
-          <Route index element={<Home />} />
-          <Route path="/about" element={<About />} />
-        </Routes>
-      </main>
-    
-    </>
-
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
